@@ -155,14 +155,16 @@ export default function ReservationLayout({ onCloseLayout }) {
         >
           ✕Close
         </button>
-        <h1>Book a Table!</h1>
+        <h1>Reserve a Table!</h1>
         {/*Name Input*/}
-        <label htmlFor="name">Your Name</label>
+        
         <input
           required
           name="name"
           id="name"
           type="text"
+          className="inputWithLabel"
+          placeholder="Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
           onBlur={nameCheckHandler}
@@ -172,12 +174,14 @@ export default function ReservationLayout({ onCloseLayout }) {
         )}
 
         {/*Email Input*/}
-        <label htmlFor="email">Email</label>
+        
         <input
           required
           name="email"
           id="email"
           type="email"
+          className="inputWithLabel"
+          placeholder="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           onBlur={emailCheckHandler}
@@ -189,7 +193,7 @@ export default function ReservationLayout({ onCloseLayout }) {
         )}
 
         {/*Person Selector*/}
-        <label htmlFor="personByAdedamola">Table Size</label>
+        
         <select
           required
           id="personByAdedamola"
@@ -198,7 +202,7 @@ export default function ReservationLayout({ onCloseLayout }) {
           onChange={(e) => setPerson(e.target.value)}
         >
           <option disabled value="">
-            Choose...
+            Select numbers of diners max (5)...
           </option>
           ;
           {personOptions.map((opt, i) => {
@@ -216,12 +220,14 @@ export default function ReservationLayout({ onCloseLayout }) {
         )}
 
         {/*Date Input*/}
-        <label htmlFor="date">Date</label>
+      
         <input
           required
           id="date"
           name="date"
           type="date"
+          className="inputWithLabel"
+          placeholder="Date"
           min={new Date().toISOString().slice(0, 10)}
           value={choosedDate}
           onChange={(e) => setChoosedDate(e.target.value)}
@@ -233,17 +239,18 @@ export default function ReservationLayout({ onCloseLayout }) {
         )}
 
         {/*Time Selector*/}
-        <label htmlFor="time">Time</label>
+
         <select
           required
           id="time"
           name="time"
+          className="inputWithLabel"
           value={choosedTime}
           onChange={(e) => setChoosedTime(e.target.value)}
         >
           <option disabled value="">
             {" "}
-            -- : --{" "}
+            Select time{" "}
           </option>
           ;
           {timeOptions.map((time, i) => {
