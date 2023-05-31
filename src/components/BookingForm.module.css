@@ -1,0 +1,181 @@
+/* CSS reset or normalize code here */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 50px 70px;
+  gap: 10px;
+}
+
+.bgLayout {
+  background-image: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(230, 214, 214, 0.33);
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+
+
+.form {
+  box-shadow: #F4CE14;
+  position: fixed;
+  box-sizing: border-box;
+  border-radius: 1rem 1rem 1rem 1rem;
+  border-width: 1rem;
+  border-bottom-width: 1rem;
+  border-left-width: 1rem;
+  border-color:rgb(251, 218, 187);
+  border-style: outset;
+  width: 350px;
+  height: 760x;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  animation: slideIn 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.form-row {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+
+@keyframes slideIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+.form h1 {
+  font-size: 1rem;
+  margin: 1rem 0;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.form label {
+  FONT-WEIGHT: 100;
+  display: block;
+  width: 100%;
+  margin: 15px px;
+  padding: 5px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  border: none;
+  line-height: 17px;
+  border-bottom: 1px solid #eee;
+  font-weight: 200;
+  text-align: left;
+}
+
+.form input,
+.form select {
+  display: block;
+  width: 70;
+  margin: 15px 12px;
+  padding: 5px;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #eee;
+  font-weight: 300;
+  transition: background-color 0.3s ease;
+}
+
+
+.form select {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.form input:focus,
+.form select:focus {
+  background-color: rgb(103, 130, 119);
+  outline: none;
+}
+
+.form input[type=submit]:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.form-row {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  gap: 10px;
+  font-size: 1.5rem;
+  background: #F4CE14;
+  border-radius: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgb(224, 186, 0);
+}
+
+.closeBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+  background-color: rgba(255, 255, 255, 0.212);
+  color: rgb(255, 0, 0);
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.closeBtn:hover {
+  color: rgb(214, 0, 0);
+}
+
+.inputError {
+  margin: 0;
+  color: rgb(255, 0, 0);
+  font-size: 0.8rem;
+  transition: color 0.3s ease;
+}
+
+.form::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in WebKit browsers */
+}
+
+@media(max-width: 820px) {
+  .form {
+    width: 90%;
+  }
+}
+
+@media(max-width: 600px) {
+  .form {
+    width: 100%;
+  }
+}
